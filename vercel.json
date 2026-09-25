@@ -4,7 +4,10 @@
     {
       "src": "Frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "npx vite build"
+      }
     },
     {
       "src": "Backend/server.js",
