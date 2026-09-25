@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.15);
+}
+
+.badge-green {
+  @apply bg-emerald-950/80 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
+.badge-yellow {
+  @apply bg-amber-950/80 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
+.badge-red {
+  @apply bg-rose-950/80 text-rose-300 border border-rose-500/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
+.badge-blue {
+  @apply bg-sky-950/80 text-sky-300 border border-sky-500/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
+.badge-purple {
+  @apply bg-purple-950/80 text-purple-300 border border-purple-500/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+}
